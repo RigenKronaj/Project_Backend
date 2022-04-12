@@ -12,14 +12,14 @@ public class Article {
     private String dueDate;
 
     public Article(Integer id, String title, String author, String genre, String type, Boolean availability, String date, String dueDate) {
-        this.setId(id);
-        this.setTitle(title);
-        this.setAuthor(author);
-        this.setGenre(genre);
-        this.setType(type);
-        this.setAvailability(availability);
-        this.setDate(date);
-        this.setDueDate(dueDate);
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+        this.type = type;
+        this.availability = availability;
+        this.date = date;
+        this.dueDate = dueDate;
     }
 
     public String getDueDate() {

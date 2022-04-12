@@ -28,25 +28,26 @@ public class ArticleController {
     }
 
     @RequestMapping(value = "/articles/{id}", method = RequestMethod.DELETE)
-    public ResponseEntity<Object> deleteArticle(@PathVariable("id") Integer id){
+    public ResponseEntity<Object> deleteArticle(@PathVariable("id") Integer id) {
         articleService.deleteArticle(id);
         return new ResponseEntity<>("Article has been deleted.", HttpStatus.OK);
     }
 
     @RequestMapping(value = "/articles/{id}", method = RequestMethod.PUT)
-    public ResponseEntity<Object>updateArticle(@PathVariable("id") Integer id, @RequestBody Article article){
+    public ResponseEntity<Object> updateArticle(@PathVariable("id") Integer id, @RequestBody Article article) {
         articleService.updateArticle(id, article);
         return new ResponseEntity<>("Article has been updated successfully", HttpStatus.OK);
     }
 
     @RequestMapping(value = "/articles", method = RequestMethod.POST)
-    public ResponseEntity<Object>createArticle(@RequestBody Article article){
+    public ResponseEntity<Object> createArticle(@RequestBody Article article) {
         articleService.createArticle(article);
         return new ResponseEntity<>("Article has been added successfully", HttpStatus.CREATED);
     }
 
     @RequestMapping(value = "/articles/{filterType}/{filter}", method = RequestMethod.GET)
-    public ResponseEntity<Object>getFilteredArticles(@PathVariable("filterType") String filterType, @PathVariable("filter") String filter){
+    public ResponseEntity<Object> getFilteredArticles(@PathVariable("filterType") String filterType,
+            @PathVariable("filter") String filter) {
         return new ResponseEntity<>(articleService.getFilteredArticles(filterType, filter), HttpStatus.OK);
     }
 }
