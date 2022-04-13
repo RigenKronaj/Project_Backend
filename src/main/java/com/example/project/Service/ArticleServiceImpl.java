@@ -24,7 +24,7 @@ public class ArticleServiceImpl implements ArticleService {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(", ");
-                Article article = new Article((int)id.incrementAndGet(), values[0], values[1], values[2], values[3], Boolean.parseBoolean(values[4]), values[5], values[6]);
+                Article article = new Article((int)id.incrementAndGet(), values[0], values[1], values[2], values[3], Boolean.parseBoolean(values[4]), values[5], values[6], values[7]);
                 articles.put(id.intValue(), article);
             }
         } catch (IOException e) {

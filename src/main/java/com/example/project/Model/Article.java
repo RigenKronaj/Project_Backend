@@ -10,8 +10,9 @@ public class Article {
     private Boolean availability;
     private String date;
     private String dueDate;
+    private String src;
 
-    public Article(Integer id, String title, String author, String genre, String type, Boolean availability, String date, String dueDate) {
+    public Article(Integer id, String title, String author, String genre, String type, Boolean availability, String date, String dueDate, String src) {
         this.id = id;
         this.title = title;
         this.author = author;
@@ -20,6 +21,15 @@ public class Article {
         this.availability = availability;
         this.date = date;
         this.dueDate = dueDate;
+        this.src = src;
+    }
+
+    public String getSrc() {
+        return src;
+    }
+
+    public void setSrc(String src) {
+        this.src = src;
     }
 
     public String getDueDate() {
