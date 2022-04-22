@@ -3,18 +3,36 @@ package com.example.project.Model;
 public class Booking {
     private Integer id;
     private Integer UID;
-    private String article;
-    private String startDate;
-    private String endDate;
-    private Boolean isReserved;
+    private Article article;
+    private Integer nrOfDays;
+    private Integer nrOfBookings;
 
-    public Booking(Integer id, Integer UID, String article, String startDate, String endDate, Boolean isReserved) {
+    public Booking() {
+        
+    }
+
+    public Booking(Integer id, Integer UID, Article article, Integer nrOfDays, Integer nrOfBookings) {
         this.id = id;
         this.UID = UID;
         this.article = article;
-        this.startDate = startDate;
-        this.endDate = endDate;
-        this.isReserved = isReserved;
+        this.nrOfDays = nrOfDays;
+        this.nrOfBookings = nrOfBookings;
+    }
+
+    public Integer getNrOfBookings() {
+        return nrOfBookings;
+    }
+
+    public void setNrOfBookings(Integer nrOfBookings) {
+        this.nrOfBookings = nrOfBookings;
+    }
+
+    public Integer getNrOfDays() {
+        return nrOfDays;
+    }
+
+    public void setNrOfDays(Integer nrOfDays) {
+        this.nrOfDays = nrOfDays;
     }
 
     public Integer getUID() {
@@ -33,35 +51,11 @@ public class Booking {
         this.id = id;
     }
 
-    public Boolean getIsReserved() {
-        return isReserved;
-    }
-
-    public void setIsReserved(Boolean isReserved) {
-        this.isReserved = isReserved;
-    }
-
-    public String getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(String endDate) {
-        this.endDate = endDate;
-    }
-
-    public String getStartDate() {
-        return startDate;
-    }
-
-    public void setStartDate(String startDate) {
-        this.startDate = startDate;
-    }
-
-    public String getArticle() {
+    public Article getArticle() {
         return article;
     }
 
-    public void setArticle(String article) {
+    public void setArticle(Article article) {
         this.article = article;
     }
 }
