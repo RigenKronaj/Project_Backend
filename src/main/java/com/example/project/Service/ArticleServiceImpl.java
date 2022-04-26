@@ -107,6 +107,11 @@ public class ArticleServiceImpl implements ArticleService {
         return availableArticles.values();
     }
 
+    @Override
+    public Object getSingleArticle(Integer id) {
+        return articles.get(id);
+    }
+
     
     /** 
      * @param filterType

@@ -30,6 +30,7 @@ public class ArticleController {
      * <br/>
      * This endpoint is used to return the full list of articles read from the CSV file
      */
+
     @RequestMapping(value = "/articles", method = RequestMethod.GET)
     public ResponseEntity<Object> getArticles() throws FileNotFoundException, IOException {
         return new ResponseEntity<>(articleService.getArticles(), HttpStatus.OK);
@@ -44,9 +45,23 @@ public class ArticleController {
      * This endpoint is used to return a filtered list of articles which only contains
      * the articles that are available
      */
+
     @RequestMapping(value = "/articles/available", method = RequestMethod.GET)
     public ResponseEntity<Object> getAvailableArticles() throws FileNotFoundException, IOException {
         return new ResponseEntity<>(articleService.getAvailableArticles(), HttpStatus.OK);
+    }
+
+    /**
+     * 
+     * @param id
+     * @return
+     * <br/>
+     * This endpoint returns a single article requested by the user
+     */
+    
+    @RequestMapping(value = "/articles/{id}", method = RequestMethod.GET)
+    public ResponseEntity<Object> getSingleArticle(@PathVariable("id") Integer id) {
+        return new ResponseEntity<>(articleService.getSingleArticle(id), HttpStatus.OK);
     }
 
     
