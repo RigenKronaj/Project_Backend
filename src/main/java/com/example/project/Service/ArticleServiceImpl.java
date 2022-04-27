@@ -90,7 +90,7 @@ public class ArticleServiceImpl implements ArticleService {
     /** 
      * @return Collection<Article>
      * <br/>
-     * This method is used to filter the entries from the hasmap into a new temporary hashmap
+     * This method is used to filter the entries from the hashmap into a new temporary hashmap
      * which will only contain articles that are available. It then returns the entries of this new
      * hashmap in the form of an array
      */
@@ -107,6 +107,12 @@ public class ArticleServiceImpl implements ArticleService {
         return availableArticles.values();
     }
 
+    /**
+     * @param id
+     * @return Object
+     * <br/>
+     * This method is used to retrieve a single article from the hashmap
+     */
     @Override
     public Object getSingleArticle(Integer id) {
         return articles.get(id);
