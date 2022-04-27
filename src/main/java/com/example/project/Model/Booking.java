@@ -3,36 +3,31 @@ package com.example.project.Model;
 public class Booking {
     private Integer id;
     private Integer UID;
-    private Article article;
-    private Integer nrOfDays;
-    private Integer nrOfBookings;
+    private String startDate;
+    private String endDate;
 
-    public Booking() {
-        
-    }
 
-    public Booking(Integer id, Integer UID, Article article, Integer nrOfDays, Integer nrOfBookings) {
+    public Booking(Integer id, Integer UID, String startDate, String endDate) {
         this.id = id;
         this.UID = UID;
-        this.article = article;
-        this.nrOfDays = nrOfDays;
-        this.nrOfBookings = nrOfBookings;
+        this.startDate = startDate;
+        this.endDate = endDate;
     }
 
-    public Integer getNrOfBookings() {
-        return nrOfBookings;
+    public String getStartDate() {
+        return startDate;
     }
 
-    public void setNrOfBookings(Integer nrOfBookings) {
-        this.nrOfBookings = nrOfBookings;
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
     }
 
-    public Integer getNrOfDays() {
-        return nrOfDays;
+    public String getEndDate() {
+        return endDate;
     }
 
-    public void setNrOfDays(Integer nrOfDays) {
-        this.nrOfDays = nrOfDays;
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
     }
 
     public Integer getUID() {
@@ -51,11 +46,4 @@ public class Booking {
         this.id = id;
     }
 
-    public Article getArticle() {
-        return article;
-    }
-
-    public void setArticle(Article article) {
-        this.article = article;
-    }
 }

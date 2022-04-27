@@ -4,12 +4,14 @@ public class User {
     private Integer UID;
     private String name;
     private String surname;
+    private String email;
     private Integer nrOfBookings;
 
-    public User(Integer UID, String name, String surname, Integer nrOfBookings) {
+    public User(Integer UID, String name, String surname, String email, Integer nrOfBookings) {
         this.UID = UID;
         this.name = name;
         this.surname = surname;
+        this.email = email;
         this.nrOfBookings = nrOfBookings;
     }
 
@@ -19,6 +21,14 @@ public class User {
 
     public void setNrOfBookings(Integer nrOfBookings) {
         this.nrOfBookings = nrOfBookings;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getSurname() {
